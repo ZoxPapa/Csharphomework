@@ -30,7 +30,25 @@
 // }
 // Console.WriteLine(DigitsSum(Prompt()));
 //---------------------------------------------------------------------------------------------
+
 // Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
+int [] ArrayFillInt(int qty)
+{
+    int[] numbers = new int[qty];
+    for (int i = 0; i < qty; i++)
+        numbers[i] = new Random().Next(1, 100);
+    return numbers;
+}
+void ArrayPrint(int[]somearray)
+{
+    Console.Write("[");
+    for(int i=0; i< somearray.Length-1; i++)
+        Console.Write(somearray[i] + ", ");
+    Console.Write(somearray[somearray.Length-1]+"]");
+}
+Console.WriteLine("Input size of array: ");
+int[] firstArray = ArrayFillInt(Prompt());
+ArrayPrint(firstArray);
