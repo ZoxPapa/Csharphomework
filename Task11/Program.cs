@@ -25,6 +25,14 @@ int MathPow(int po, int ex)
         result *= po;
     return result;
 }
+double[] ArrayFillDouble(int qty)
+{
+    double[] numbers = new double[qty];
+    for (int i = 0; i < qty; i++)
+        numbers[i] = new Random().Next(1, 11);
+    return numbers;
+}
+
 
 //----------------------------------------------------------------------------------------------
 // Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
@@ -106,13 +114,7 @@ int SumOddInArray (int[]array)
 
 // Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
-double[] ArrayFillDouble(int qty)
-{
-    double[] numbers = new double[qty];
-    for (int i = 0; i < qty; i++)
-        numbers[i] = new Random().Next(1, 11);
-    return numbers;
-}
+
 double DiffMaxMinArray(double [] array)
 {
     double min = array[0];
