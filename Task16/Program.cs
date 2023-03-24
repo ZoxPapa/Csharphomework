@@ -30,6 +30,8 @@ int SumBetweenNumbers(int a, int b)
 
 int AckermannFunction(int m, int n)
 {
+    if (m < 0 || n < 0)
+        Console.WriteLine("Error. Wrong numbers.");
     if (m == 0)
         return n + 1;
     if (n == 0)
@@ -37,4 +39,4 @@ int AckermannFunction(int m, int n)
     else
         return AckermannFunction(m - 1, AckermannFunction(m, n - 1));
 }
-Console.WriteLine(AckermannFunction(3, 8));
+Console.WriteLine(AckermannFunction(0, 1));
